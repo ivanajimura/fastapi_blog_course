@@ -19,5 +19,10 @@ update-requirements:
 start-server:
 	@uvicorn backend.main:app --reload
 
-init-git:
+git-init:
 	@git init
+
+git-commit:
+	@git add .;
+	git status;
+	git commit -m "$(m)"
